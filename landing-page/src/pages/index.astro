@@ -199,17 +199,17 @@ const tools = {
             <div class="col-span-2 aspect-video bg-black rounded border border-white/10 overflow-hidden relative">
                 <iframe src="https://player.vimeo.com/video/166011997?h=0e0e0e0e0e&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden">
-                 <video controls muted loop class="w-full h-full object-cover"><source src="/assets/video/kirin_scene_1.mp4" type="video/mp4"></video>
+            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden relative">
+                 <iframe src="https://player.vimeo.com/video/1144342590?title=0&byline=0&portrait=0&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden">
-                 <video controls muted loop class="w-full h-full object-cover"><source src="/assets/video/kirin_scene_2.mp4" type="video/mp4"></video>
+            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden relative">
+                 <iframe src="https://player.vimeo.com/video/1144342561?title=0&byline=0&portrait=0&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden">
-                 <video controls muted loop class="w-full h-full object-cover"><source src="/assets/video/kirin_scene_3.mp4" type="video/mp4"></video>
+            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden relative">
+                 <iframe src="https://player.vimeo.com/video/1144342571?title=0&byline=0&portrait=0&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden">
-                 <video controls muted loop class="w-full h-full object-cover"><source src="/assets/video/kirin_scene_4.mp4" type="video/mp4"></video>
+            <div class="aspect-video bg-black rounded border border-white/10 overflow-hidden relative">
+                 <iframe src="https://player.vimeo.com/video/1144342585?title=0&byline=0&portrait=0&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
       </div>
@@ -388,13 +388,10 @@ const tools = {
         <div class="flex flex-col gap-4 lg:order-1">
             <!-- Web Scroll -->
             <div class="space-y-2">
-                 <div class="relative aspect-video bg-black rounded border border-white/10 overflow-hidden cursor-pointer group" onclick="openLightbox(this.querySelector('video'))">
-                     <video muted loop autoplay playsinline class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <source src="/assets/video/workshop_scroll.mp4" type="video/mp4">
-                     </video>
-                     <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition flex items-center justify-center">
-                        <svg class="text-white/50 group-hover:text-white transition opacity-0 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
-                     </div>
+                 <div class="relative aspect-video bg-black rounded border border-white/10 overflow-hidden cursor-pointer group">
+                     <iframe src="https://player.vimeo.com/video/1144343704?background=1&autoplay=1&loop=1&byline=0&title=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                     <!-- Overlay removed as Vimeo background mode handles interaction differently, but keeping click-to-open might be tricky with iframe. For now, let's just embed it. Interaction (lightbox) on iframe is hard without a covering div. -->
+                     <div class="absolute inset-0 bg-transparent" onclick="openLightbox(this.previousElementSibling)"></div> 
                  </div>
                  <p class="text-xs text-gray-500 font-mono text-center uppercase tracking-widest">Web Experience</p>
             </div>
@@ -402,18 +399,14 @@ const tools = {
             <!-- Campaign & Event Grid -->
             <div class="grid grid-cols-2 gap-4">
                  <div class="space-y-2">
-                     <div class="aspect-square bg-black rounded border border-white/10 overflow-hidden cursor-pointer group" onclick="openLightbox(this.querySelector('video'))">
-                         <video muted loop autoplay playsinline class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <source src="/assets/video/workshop_restoration.mp4" type="video/mp4">
-                         </video>
+                     <div class="aspect-square bg-black rounded border border-white/10 overflow-hidden relative">
+                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/UBjjd7HwVpw?autoplay=1&loop=1&playlist=UBjjd7HwVpw&controls=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                      </div>
                      <p class="text-xs text-gray-500 font-mono text-center uppercase tracking-widest">Restoration Campaign</p>
                  </div>
                  <div class="space-y-2">
-                     <div class="aspect-square bg-black rounded border border-white/10 overflow-hidden cursor-pointer group" onclick="openLightbox(this.querySelector('video'))">
-                         <video muted loop autoplay playsinline class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <source src="/assets/video/workshop_event_stand.mp4" type="video/mp4">
-                         </video>
+                     <div class="aspect-square bg-black rounded border border-white/10 overflow-hidden relative">
+                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_qvjis5QreA?autoplay=1&loop=1&playlist=_qvjis5QreA&controls=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                      </div>
                      <p class="text-xs text-gray-500 font-mono text-center uppercase tracking-widest">Event Stand Design</p>
                  </div>
