@@ -62,7 +62,7 @@ const tools = {
     <div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
       <!-- <img src="/assets/img/HERO_BG_STILL.svg" class="w-full h-full object-cover" alt="Background" /> -->
       <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover pointer-events-none">
-        <source src="/assets/video/hero-bg-blur.mp4" type="video/mp4">
+        <source src="/assets/video/bg-video2x4_1.mp4" type="video/mp4">
       </video>
     </div>
     
@@ -332,10 +332,8 @@ const tools = {
             
             <!-- Vertical Video Highlight -->
             <div class="flex justify-center bg-[#151515] rounded-xl border border-white/5 p-6">
-                <div class="relative h-[500px] w-auto aspect-[9/16] rounded-lg overflow-hidden shadow-2xl border border-white/10 cursor-pointer group" onclick="openLightbox(this.querySelector('video'))">
-                    <video muted loop autoplay playsinline class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <source src="/assets/video/grohe_mobile.mp4" type="video/mp4">
-                    </video>
+                <div class="relative h-[500px] w-auto aspect-[9/16] rounded-lg overflow-hidden shadow-2xl border border-white/10 cursor-pointer group" onclick="openLightbox('https://player.vimeo.com/video/1144344760?autoplay=1&loop=1&muted=0')">
+                    <iframe src="https://player.vimeo.com/video/1144344760?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition flex items-center justify-center">
                         <svg class="text-white/50 group-hover:text-white transition opacity-0 group-hover:opacity-100" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
                     </div>
