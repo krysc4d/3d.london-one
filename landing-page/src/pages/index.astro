@@ -59,11 +59,18 @@ const tools = {
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10 px-4">
     <!-- Background Asset -->
-    <div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
-      <!-- <img src="/one/assets/img/HERO_BG_STILL.svg" class="w-full h-full object-cover" alt="Background" /> -->
-      <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" class="w-full h-full object-cover pointer-events-none">
-        <source src="/one/assets/video/bg-video2x4_1.mp4" type="video/mp4">
-      </video>
+    <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-black">
+        <!-- Two stacked videos for vertical repetition -->
+        <div class="absolute inset-0 opacity-20 blur-[4px] flex flex-col">
+            <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" class="w-full h-auto object-cover flex-1">
+                <source src="/one/assets/video/bg-video2x4_1.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" class="w-full h-auto object-cover flex-1">
+                <source src="/one/assets/video/bg-video2x4_1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <!-- Vignette Overlay -->
+        <div class="absolute inset-0 bg-[radial-gradient(circle,transparent_30%,rgba(0,0,0,0.9)_100%)]"></div>
     </div>
     
     <div class="relative z-10 max-w-5xl mx-auto text-center pointer-events-auto">
@@ -240,12 +247,12 @@ const tools = {
         </div>
         <div class="flex flex-col gap-6 lg:order-1">
             <!-- Main Promo Video (Vertical) -->
-            <div class="aspect-[9/16] bg-black rounded border border-white/10 overflow-hidden relative max-w-[280px] mx-auto w-full shadow-2xl">
+            <div class="aspect-[4/5] bg-black rounded border border-white/10 overflow-hidden relative max-w-sm mx-auto w-full shadow-2xl">
                 <iframe src="https://player.vimeo.com/video/1144188683?h=0e0e0e0e0e&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <!-- Simulated Facebook Carousel -->
-            <div class="bg-[#242526] rounded-xl border border-white/10 p-4 font-sans max-w-md mx-auto w-full">
+            <div class="bg-[#151515] rounded-xl border border-white/10 p-4 font-sans max-w-md mx-auto w-full">
                 <!-- Post Header -->
                 <div class="flex items-center gap-3 mb-3">
                     <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center font-bold text-white">W</div>
@@ -263,36 +270,36 @@ const tools = {
                 <!-- Carousel Scroll -->
                 <div class="flex gap-2 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
                     <!-- Card 1 -->
-                    <div class="min-w-[85%] snap-center bg-[#18191a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
+                    <div class="min-w-[85%] snap-center bg-[#0a0a0a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
                         <img src="/one/assets/img/wp_carousel_1.jpg" class="w-full aspect-square object-cover" />
-                        <div class="p-3 bg-[#3a3b3c] flex-grow flex flex-col justify-between">
+                        <div class="p-3 bg-[#1a1a1a] flex-grow flex flex-col justify-between">
                              <div class="text-gray-300 text-xs font-bold mb-1">TEXTILES IN 3D</div>
                              <div class="text-gray-400 text-[10px] leading-tight line-clamp-2">Present your product in its best light. No apps required.</div>
                              <div class="mt-2 text-xs font-bold text-blue-400 bg-white/5 px-2 py-1 rounded w-fit">Learn More</div>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="min-w-[85%] snap-center bg-[#18191a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
+                    <div class="min-w-[85%] snap-center bg-[#0a0a0a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
                         <img src="/one/assets/img/wp_carousel_2.jpg" class="w-full aspect-square object-cover" />
-                        <div class="p-3 bg-[#3a3b3c] flex-grow flex flex-col justify-between">
+                        <div class="p-3 bg-[#1a1a1a] flex-grow flex flex-col justify-between">
                              <div class="text-gray-300 text-xs font-bold mb-1">JEWELRY IN 3D</div>
                              <div class="text-gray-400 text-[10px] leading-tight line-clamp-2">3D preview of your product online. No special hardware.</div>
                              <div class="mt-2 text-xs font-bold text-blue-400 bg-white/5 px-2 py-1 rounded w-fit">Learn More</div>
                         </div>
                     </div>
                     <!-- Card 3 -->
-                    <div class="min-w-[85%] snap-center bg-[#18191a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
+                    <div class="min-w-[85%] snap-center bg-[#0a0a0a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
                         <img src="/one/assets/img/wp_carousel_3.jpg" class="w-full aspect-square object-cover" />
-                        <div class="p-3 bg-[#3a3b3c] flex-grow flex flex-col justify-between">
+                        <div class="p-3 bg-[#1a1a1a] flex-grow flex flex-col justify-between">
                              <div class="text-gray-300 text-xs font-bold mb-1">COSMETICS IN 3D</div>
                              <div class="text-gray-400 text-[10px] leading-tight line-clamp-2">Interactive 3D product visualization for e-commerce.</div>
                              <div class="mt-2 text-xs font-bold text-blue-400 bg-white/5 px-2 py-1 rounded w-fit">Learn More</div>
                         </div>
                     </div>
                     <!-- Card 4 -->
-                    <div class="min-w-[85%] snap-center bg-[#18191a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
+                    <div class="min-w-[85%] snap-center bg-[#0a0a0a] rounded-lg overflow-hidden border border-white/5 flex flex-col group cursor-pointer" onclick="openLightbox(this.querySelector('img'))">
                         <img src="/one/assets/img/wp_carousel_4.jpg" class="w-full aspect-square object-cover" />
-                        <div class="p-3 bg-[#3a3b3c] flex-grow flex flex-col justify-between">
+                        <div class="p-3 bg-[#1a1a1a] flex-grow flex flex-col justify-between">
                              <div class="text-gray-300 text-xs font-bold mb-1">WIRTUALNYPRODUKT.PL</div>
                              <div class="text-gray-400 text-[10px] leading-tight line-clamp-2">Total 3D preview solution for your online store.</div>
                              <div class="mt-2 text-xs font-bold text-blue-400 bg-white/5 px-2 py-1 rounded w-fit">Learn More</div>
