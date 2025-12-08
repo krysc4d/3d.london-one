@@ -558,16 +558,17 @@ const tools = {
 
   <!-- Contact with Media Wall -->
   <section class="relative py-32 px-4 overflow-hidden bg-black">
-      <!-- Media Wall Background -->
-      <div class="absolute inset-0 z-0 grid grid-cols-2 md:grid-cols-4 opacity-40 pointer-events-none">
-          <video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="/one/assets/footer_wall/left-right.mp4" type="video/mp4"></video>
-          <img src="/one/assets/footer_wall/liquid_bottle.jpg" class="w-full h-full object-cover" alt="" />
-          <video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="/one/assets/footer_wall/material-gradient_2.mp4" type="video/mp4"></video>
-          <video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="/one/assets/footer_wall/orbit_2.mp4" type="video/mp4"></video>
-          <video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="/one/assets/footer_wall/octane_render.mp4" type="video/mp4"></video>
-          <video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="/one/assets/footer_wall/sketchy.mp4" type="video/mp4"></video>
-          <video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="/one/assets/footer_wall/tikki1_1.mp4" type="video/mp4"></video>
-          <video autoplay muted loop playsinline class="w-full h-full object-cover"><source src="/one/assets/footer_wall/wtf1_5.mp4" type="video/mp4"></video>
+      <!-- Media Wall Background (Reused Hero BG) -->
+      <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-black">
+        <div class="absolute inset-0 opacity-20 blur-[4px] flex flex-col">
+            <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" class="w-full h-auto object-cover flex-1">
+                <source src="/one/assets/video/bg-video2x4_1.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback" class="w-full h-auto object-cover flex-1">
+                <source src="/one/assets/video/bg-video2x4_1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle,transparent_30%,rgba(0,0,0,0.9)_100%)]"></div>
       </div>
       
       <!-- Blur & Overlay -->
